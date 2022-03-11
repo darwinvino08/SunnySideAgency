@@ -110,3 +110,9 @@ a {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+/* testimonial icon */
+.testimonial-icon {
+  height: 100px;
+  weight: 100px;
+  border-radius: 100px;
+}
