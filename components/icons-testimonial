@@ -1,0 +1,6 @@
+/* testimonial icon */
+.testimonial-icon {
+  height: 100px;
+  weight: 100px;
+  border-radius: 100px;
+}
