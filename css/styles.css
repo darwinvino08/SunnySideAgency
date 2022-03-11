@@ -92,3 +92,21 @@ a {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+/* Grids */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid--1x4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
