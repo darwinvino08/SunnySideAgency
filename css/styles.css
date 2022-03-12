@@ -93,7 +93,8 @@ a {
 
 /* icons */
 .icon {
-  fill: var(--color-dark-moderate-cyan);
+  fill: var(--color-yellow);
+  background-color: pink;
   width: 40px;
   height: 40px;
 }
@@ -141,32 +142,53 @@ a {
   color: var(--color-grayish-blue);
   text-align: center;
 }
+
+/* Nice Picture */
 .multi-grid-child {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 40rem;
+  grid-template-columns: repeat(2, 1fr);
+  height: 50rem;
 }
-.multi-grid-child .background-container {
+.background__container {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.multi-grid-child .background-container:nth-child(1) {
+.background__container:nth-child(1) {
   background-image: url(./../images/mobile/image-gallery-milkbottles.jpg);
 }
-.multi-grid-child .background-container:nth-child(2) {
+.background__container:nth-child(2) {
   background-image: url(./../images/mobile/image-gallery-orange.jpg);
 }
-.multi-grid-child .background-container:nth-child(3) {
+.background__container:nth-child(3) {
   background-image: url(./../images/mobile/image-gallery-cone.jpg);
 }
-.multi-grid-child .background-container:nth-child(4) {
+.background__container:nth-child(4) {
   background-image: url(./../images/mobile/image-gallery-sugar-cubes.jpg);
 }
 @media screen and (min-width: 1024px) {
   .multi-grid-child {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: 400px;
+    height: 50rem;
   }
+}
+
+/* collapsibles */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+.collapsible__heading {
+  margin-top: 0;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
