@@ -25,7 +25,8 @@ body {
 }
 h1 {
   font-size: 7rem;
-  color: var(--color-soft-red);
+  color: var(--color-white);
+  font-family: "Fraunces", Arial, Helvetica, sans-serif;
 }
 h2 {
   font-size: 4rem;
@@ -49,7 +50,7 @@ h5 {
     font-size: 1.8rem;
   }
   h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
   h2 {
     font-size: 4rem;
@@ -61,9 +62,14 @@ h5 {
     font-size: 1.7rem;
   }
 }
+
 /* Links */
 a {
   text-decoration: none;
+}
+
+.list {
+  list-style: none;
 }
 .link-arrow {
   font-family: "Fraunces", "Times New Roman", Times, serif;
@@ -93,10 +99,15 @@ a {
 
 /* icons */
 .icon {
-  fill: var(--color-yellow);
-  background-color: pink;
   width: 40px;
   height: 40px;
+  fill: #fff;
+}
+.icon--primary {
+  fill: var(--color-primary);
+}
+.icon--white {
+  fill: #fff;
 }
 .attribution {
   font-size: 11px;
@@ -191,4 +202,110 @@ a {
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
+  background: #fff;
+  margin: 0 100px;
+}
+
+/* Navigation Bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+.heading__logo {
+  padding: 0rem;
+}
+.nav--white {
+  color: white;
+}
+.nav--black {
+  color: #000;
+}
+.nav__list {
+  width: 100%;
+}
+.nav__item {
+  padding: 4rem 4rem;
+}
+.nav__item > a {
+  color: black;
+}
+.nav__btn > a {
+  color: #000;
+  background-color: hsl(51, 100%, 50%);
+  padding: 20px 20px;
+  border-radius: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading__container {
+  background: url(/images/desktop/image-header.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+.nav__heading {
+  visibility: hidden;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nav__toggler {
+  cursor: pointer;
+}
+.nav__brand {
+  transform: translateY(5px);
+}
+.heading__logo {
+  margin-top: 20px;
+}
+.arrow__heading {
+  margin: auto;
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    background-size: cover;
+    margin: 0;
+  }
+  .nav__toggler {
+    display: none;
+  }
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+    margin: 0;
+  }
+  .nav__item {
+    padding: 30px 40px;
+    text-align: center;
+  }
+  .nav__item > a {
+    color: white;
+  }
+  .nav__heading {
+    visibility: visible;
+  }
+  .collapsible--expanded .collapsible__content {
+    opacity: 1;
+    background: none;
+  }
+  .nav__btn > a {
+    color: #000;
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
