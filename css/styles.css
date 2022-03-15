@@ -324,7 +324,7 @@ article {
   text-align: center;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   article {
     text-align: left;
   }
@@ -332,6 +332,6 @@ article {
     order: 1;
   }
   .feature__typography {
-    margin: 120px 240px;
+    margin: 12rem 24rem;
   }
 }
