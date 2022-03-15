@@ -17,6 +17,9 @@ html {
   /* 62.5% of 16px = 10px */
   font-size: 62.5%;
 }
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Barlow", Arial, Helvetica, sans-serif;
   color: var(--color-dark-grayish-blue);
@@ -129,9 +132,6 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .grid--1x4 {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 /* testimonial  */
@@ -307,5 +307,31 @@ a {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+  }
+}
+
+/* Features */
+.feature {
+}
+.feature__img {
+  width: 100%;
+  height: 100%;
+}
+.feature__typography {
+  margin: 2rem 5rem;
+}
+article {
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  article {
+    text-align: left;
+  }
+  .feature:first-child .feature__one {
+    order: 1;
+  }
+  .feature__typography {
+    margin: 120px 240px;
   }
 }
